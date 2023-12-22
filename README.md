@@ -9,7 +9,7 @@
     <tbody>
     <tr>
         <td>Shipengine package</td>
-        <td>November 28, 2023</td>
+        <td>December 22, 2023</td>
         <td>Detailed description of the API of the Shipengine package.</td>
     </tr>
     </tbody>
