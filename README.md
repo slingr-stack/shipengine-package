@@ -8,9 +8,9 @@
     </thead>
     <tbody>
     <tr>
-        <td>Skeleton package</td>
+        <td>Shipengine package</td>
         <td>November 28, 2023</td>
-        <td>Detailed description of the API of the Skeleton package.</td>
+        <td>Detailed description of the API of the Shipengine package.</td>
     </tr>
     </tbody>
 </table>
@@ -19,20 +19,20 @@
 
 # Javascript API
 
-The Javascript API of the skeleton endpoint has two pieces:
+The Javascript API of the shipengine endpoint has two pieces:
 
 - **HTTP requests**
 - **Flow steps**
 
 ## HTTP requests
-You can make `GET`,`PUT`,`PATCH`,`DELETE` requests to the [skeleton API](API_URL_HERE) like this:
+You can make `GET`,`PUT`,`PATCH`,`DELETE` requests to the [shipengine API](https://www.shipengine.com/docs/introduction/) like this:
 ```javascript
-var response = pkg.skeleton.api.get('/path3')
-var response = pkg.skeleton.api.put('/path1/:testPath', body)
-var response = pkg.skeleton.api.put('/path1/:testPath')
-var response = pkg.skeleton.api.patch('/path2?param2=' + httpOptions.query.param2 + '&param3=' + httpOptions.query.param3 + '', body)
-var response = pkg.skeleton.api.patch('/path2?param2=' + httpOptions.query.param2 + '&param3=' + httpOptions.query.param3 + '')
-var response = pkg.skeleton.api.delete('/path4')
+var response = pkg.shipengine.api.post('/connections/carriers/ups', body)
+var response = pkg.shipengine.api.post('/connections/carriers/ups')
+var response = pkg.shipengine.api.get('/carriers/:carrierId/services')
+var response = pkg.shipengine.api.delete('/shipments/:shipmentId/tags/:tagName')
+var response = pkg.shipengine.api.put('/packages/:packageId', body)
+var response = pkg.shipengine.api.put('/packages/:packageId')
 ```
 
 Please take a look at the documentation of the [HTTP service](https://github.com/slingr-stack/http-service)
@@ -201,11 +201,217 @@ Generic flow step for full use of the entire endpoint and its services.
 
 </details>
 
+
+## Additional Flow Step
+
+
+<details>
+    <summary>Click here to see the Customs Flow Steps</summary>
+
+<br>
+
+
+
+### Custom Flow Steps Name
+
+Description of Custom Flow Steps
+
+### Start Tracking Updates
+
+This step allows you to subscribe to tracking updates for a package.
+
+
+<h3>Inputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Label</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Default</th>
+        <th>Visibility</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Carrier Code</td>
+        <td>DropDown</td>
+        <td>yes</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            Supported Carriers.
+        </td>
+    </tr>
+    <tr>
+        <td>Tracking Number</td>
+        <td>Test</td>
+        <td>yes</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            A unique identification code assigned to a package.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>Outputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>response</td>
+        <td>object</td>
+        <td>
+            Object resulting from the response to the endpoint call.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+### Stop Tracking Updates
+
+This step allows you to unsubscribe to tracking updates for a package.
+
+
+<h3>Inputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Label</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Default</th>
+        <th>Visibility</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Carrier Code</td>
+        <td>DropDown</td>
+        <td>yes</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            Supported Carriers.
+        </td>
+    </tr>
+    <tr>
+        <td>Tracking Number</td>
+        <td>Test</td>
+        <td>yes</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            A unique identification code assigned to a package.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>Outputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>response</td>
+        <td>object</td>
+        <td>
+            Object resulting from the response to the endpoint call.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+### Tracking Information
+
+Get information about tracking
+
+
+<h3>Inputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Label</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Default</th>
+        <th>Visibility</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Carrier Code</td>
+        <td>DropDown</td>
+        <td>yes</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            Supported Carriers.
+        </td>
+    </tr>
+    <tr>
+        <td>Tracking Number</td>
+        <td>Test</td>
+        <td>yes</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            A unique identification code assigned to a package.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>Outputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>response</td>
+        <td>object</td>
+        <td>
+            Object resulting from the response to the endpoint call.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</details>
+
 For more information about how shortcuts or flow steps work, and how they are generated, take a look at the [slingr-helpgen tool](https://github.com/slingr-stack/slingr-helpgen).
 
 ## Dependencies
-* HTTP Service (Latest Version)
-* Oauth Package (v1.0.19) // TODO review and remove if its needed
+* HTTP Service (v1.3.7)
 
 ## About SLINGR
 

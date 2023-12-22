@@ -1,0 +1,233 @@
+{
+  "label": "Stop Tracking Updates",
+  "name": "stopTrackingShipEngine",
+  "category": "integrations",
+  "description": "This step allows you to unsubscribe from tracking updates for a package.",
+  "inputs": [
+    {
+      "label": "Carrier Code",
+      "name": "carrierCode",
+      "type": "dropDown",
+      "description": "Supported Carriers.",
+      "multiplicity": "one",
+      "options": {
+        "possibleValues": [
+          {
+            "label": "U.S. Postal Service",
+            "name": "usps"
+          },
+          {
+            "label": "Stamps.com",
+            "name": "stamps_com"
+          },
+          {
+            "label": "FedEx",
+            "name": "fedex"
+          },
+          {
+            "label": "UPS",
+            "name": "ups"
+          },
+          {
+            "label": "DHL Express",
+            "name": "dhl_express"
+          },
+          {
+            "label": "DHL ECommerce",
+            "name": "dhl_global_mail"
+          },
+          {
+            "label": "DHL eCommerce Australia",
+            "name": "dhl_ecommerce_au"
+          },
+          {
+            "label": "Access Worldwide",
+            "name": "access_worldwide"
+          },
+          {
+            "label": "APC",
+            "name": "apc"
+          },
+          {
+            "label": "Aramex AU / Fastway",
+            "name": "fastway_au"
+          },
+          {
+            "label": "Aramex NZ / Fastway",
+            "name": "fastway_nz"
+          },
+          {
+            "label": "Asendia",
+            "name": "asendia"
+          },
+          {
+            "label": "Australia Post",
+            "name": "australia_post"
+          },
+          {
+            "label": "Australia Post eParcel",
+            "name": "australia_post"
+          },
+          {
+            "label": "Australia Post MyPost Business",
+            "name": "australia_post_mypost_business"
+          },
+          {
+            "label": "Canada Post",
+            "name": "canada_post"
+          },
+          {
+            "label": "Canpar Express",
+            "name": "canpar"
+          },
+          {
+            "label": "CouriersPlease",
+            "name": "couriers_please"
+          },
+          {
+            "label": "DAI",
+            "name": "dai"
+          },
+          {
+            "label": "Direct Freight",
+            "name": "direct_freight"
+          },
+          {
+            "label": "Evri International",
+            "name": "evri_international"
+          },
+          {
+            "label": "First Mile",
+            "name": "firstmile"
+          },
+          {
+            "label": "Freightways",
+            "name": "freightways"
+          },
+          {
+            "label": "Freightways - Castle Parcels",
+            "name": "castle_parcels"
+          },
+          {
+            "label": "Freightways - New Zealand Couriers",
+            "name": "new_zealand_couriers"
+          },
+          {
+            "label": "Freightways - Now Couriers",
+            "name": "now_couriers"
+          },
+          {
+            "label": "Freightways - Post Haste",
+            "name": "post_haste"
+          },
+          {
+            "label": "Global Access",
+            "name": "global_access"
+          },
+          {
+            "label": "IMEX",
+            "name": "imex"
+          },
+          {
+            "label": "Landmark Global",
+            "name": "landmark_global"
+          },
+          {
+            "label": "Landmark Global AU",
+            "name": "landmark_global_au"
+          },
+          {
+            "label": "Landmark Global UK",
+            "name": "landmark_global_uk"
+          },
+          {
+            "label": "Newgistics",
+            "name": "newgistics"
+          },
+          {
+            "label": "Nobordist",
+            "name": "nobordist"
+          },
+          {
+            "label": "NZ Post Domestic",
+            "name": "courierpost"
+          },
+          {
+            "label": "NZ Post International",
+            "name": "new_zealand_post_international"
+          },
+          {
+            "label": "OnTrac",
+            "name": "ontrac"
+          },
+          {
+            "label": "Purolator Canada",
+            "name": "purolator_ca"
+          },
+          {
+            "label": "Quantium",
+            "name": "quantium"
+          },
+          {
+            "label": "RR Donnelley",
+            "name": "rr_donnelley"
+          },
+          {
+            "label": "SEKO Omni-Channel Logistics",
+            "name": "seko"
+          },
+          {
+            "label": "SEKO Omni-Channel Logistics UK",
+            "name": "seko_uk"
+          },
+          {
+            "label": "Sendle",
+            "name": "sendle"
+          },
+          {
+            "label": "Seven Senders",
+            "name": "seven_senders"
+          },
+          {
+            "label": "StarTrack",
+            "name": "star_track"
+          },
+          {
+            "label": "TNT Australia",
+            "name": "tnt_australia"
+          },
+          {
+            "label": "Toll IPEC",
+            "name": "toll_ipec"
+          },
+          {
+            "label": "Toll Priority",
+            "name": "toll_priority"
+          },
+          {
+            "label": "Wizmo",
+            "name": "wizmo"
+          }
+        ],
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Tracking Number",
+      "name": "trackingNumber",
+      "description": "A unique identification code assigned to a package",
+      "type": "text",
+      "options": {
+        "allowContextSelector": "true"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": "Response",
+      "name": "response",
+      "type": "object",
+      "description": "The response to external URL"
+    }
+  ]
+}
