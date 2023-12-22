@@ -17,6 +17,23 @@
 
 # Overview
 
+ShipEngine APIs have powered over one billion shipments for the fastest growing brands and logistics companies.
+
+
+## Configuration
+
+First you will need to setup an account in ShipEngine. Then you will be able to configure the endpoint you will
+need to generate an API key. You can find more information about that [here](https://www.shipengine.com/docs/getting-started/#authentication).
+
+### API key
+
+The private key can be generated in the dashboard of your ShipEngine app. Just copy the generated API secret to this field.
+
+
+### Webhook URL
+
+This is the URL you should configure for webhooks in ShipEngine dashboard.
+
 # Javascript API
 
 The Javascript API of the shipengine package has two pieces:
