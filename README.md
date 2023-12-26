@@ -22,7 +22,7 @@ ShipEngine APIs have powered over one billion shipments for the fastest growing 
 
 ## Configuration
 
-First you will need to setup an account in ShipEngine. Then you will be able to configure the endpoint you will
+First you will need to setup an account in ShipEngine. Then you will be able to configure the package you will
 need to generate an API key. You can find more information about that [here](https://www.shipengine.com/docs/getting-started/#authentication).
 
 ### API key
